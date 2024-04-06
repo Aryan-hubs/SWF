@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Welfare Fund JNV Rayagada</title>
+    <title>Staff Welfare Fund - JNV Rayagada</title>
     <style>
         /* Reset some default styles */
         body, h1, h2, h3, p, ul, li {
@@ -13,29 +13,26 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            background-color: #f2f2f2;
             color: #333;
             line-height: 1.6;
             overflow-x: hidden; /* Prevent horizontal scrolling */
+            margin: 0;
+            padding: 0;
         }
 
         header {
             background-color: #007bff;
             color: #fff;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
-            animation: slideIn 1s forwards;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        @keyframes slideIn {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+        h1, h2, h3 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333; /* Change color to contrast with background */
         }
 
         nav ul {
@@ -54,9 +51,12 @@
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 30px;
             background-color: #0056b3;
             transition: background-color 0.3s ease;
+            display: block;
+            font-weight: bold; /* Added font weight */
+            text-transform: uppercase; /* Uppercase for nav links */
         }
 
         nav ul li a:hover {
@@ -65,24 +65,23 @@
 
         section {
             background-color: #fff;
-            padding: 40px 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .contribution-info {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .recent-transactions {
             border: 2px solid #007bff; /* Set border width and color */
-            padding: 40px;
-            border-radius: 5px;
-            height: 80%;
-            max-height: calc(100vh - 200px); /* Set maximum height */
+            padding: 20px;
+            border-radius: 10px;
+            max-height: 400px; /* Set maximum height */
             overflow-y: auto; /* Add vertical scrollbar if needed */
-            margin: 0 auto; /* Center the box */
             text-align: center; /* Center the content */
         }
 
@@ -90,73 +89,76 @@
             background-color: #007bff;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
             position: fixed;
-            bottom: 0;
             width: 100%;
-        }
-
-        footer p {
-            margin: 0;
+            bottom: 0;
         }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
             header {
-                padding: 15px;
+                padding: 15px 0;
             }
 
-            nav ul {
-                flex-direction: column;
-                align-items: center;
+            h1 {
+                font-size: 24px; /* Decrease font size for better fit on smaller screens */
+            }
+
+            h2 {
+                font-size: 20px; /* Decrease font size for better fit on smaller screens */
             }
 
             nav ul li {
                 margin: 5px;
+            }
+
+            nav ul li a {
+                padding: 8px 16px; /* Adjust padding for smaller screens */
+            }
+
+            section {
+                padding: 30px; /* Adjust padding for smaller screens */
+            }
+
+            .recent-transactions {
+                max-height: 300px; /* Reduce max height for better fit on smaller screens */
+            }
+
+            footer {
+                padding: 15px 0;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>
-            <span class="animation-slide">Staff Welfare Fund</span><br>
-            <span class="animation-slide">Jawahar Navodaya Vidyalaya Rayagada</span>
-        </h1>
+        <h1>Staff Welfare Fund</h1>
+        <h2>Jawahar Navodaya Vidyalaya Rayagada</h2>
         <nav>
             <ul>
-                <li><a href="#contribution-tracker">Contribution Tracker</a></li>
-                <li><a href="#expenditure-tracker">Expenditure Tracker</a></li>
-                <li><a href="#donation-options">Donation Options</a></li>
-                <li><a href="#faqs">FAQs</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contribution-tracker">Contribute</a></li>
+                <li><a href="#account-statement">Account Statement</a></li>
+                <li><a href="#suggestion">Suggestion</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="contribution-tracker">
         <div class="contribution-info">
-            <h2>Current Contribution Value:</h2>
-            <p><strong>₹5000</strong></p>
+            <h2>Current Account Balance: ₹5000.00 </h2>
         </div>
         <div class="recent-transactions">
             <h2>Recent Transactions</h2>
-            <iframe src="https://drive.google.com/file/d/your_excel_file_id/preview" width="100%" height="auto"></iframe>
+            <!-- Embed Excel file from Google Drive -->
+            <iframe src="https://docs.google.com/spreadsheets/d/1-_csyF4HNn1cCb_E9GBGM2Fd1cH8SFmv?rtpof=true&usp=drive_fs/preview" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Staff Welfare Fund JNV Rayagada. All rights reserved.</p>
+        <p>&copy; 2024 Staff Welfare Fund JNV Rayagada</p>
     </footer>
-
-    <script>
-        // Toggle navigation menu
-        const toggleMenu = () => {
-            const nav = document.querySelector('nav ul');
-            nav.classList.toggle('active');
-        }
-
-        document.querySelector('header nav').addEventListener('click', toggleMenu);
-    </script>
 </body>
 </html>
+
